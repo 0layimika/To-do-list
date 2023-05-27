@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Are you sure you want to delete this?</h1>
+{{ jobs }}
+
+
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" value="confirm delete" style="background: blue;color: white">
+</form>
+{% endblock %}

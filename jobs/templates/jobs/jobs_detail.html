@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Job Description</h1>
+{{ jobs }}<br>
+<p style="margin-left: 0.5in">
+    <a href="/jobs/delete_job/{{ jobs.id }}" style="background: blue; color:white">Done</a>
+</p>
+{% endblock %}

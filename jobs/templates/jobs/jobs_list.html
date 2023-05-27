@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Jobs you have pending:</h1>
+    <ul>
+        {% for jobs in jobs_list %}
+            <ol>
+                <ul>
+                    <li style="font-family: 'Arial Black'">
+                        <a href="/jobs/jobs_detail/{{ jobs.id }}">{{ jobs.activity }}</a>
+                    </li>
+                    <p>
+                        <a href="/jobs/delete_job/{{ jobs.id }}" style="background: blue; color:white ">Done</a>
+                    </p>
+                </ul>
+            </ol>
+        {% endfor %}
+    </ul>
+{% endblock %}
